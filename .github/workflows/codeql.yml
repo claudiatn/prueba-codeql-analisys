@@ -98,7 +98,7 @@ jobs:
         category: "/language:${{matrix.language}}"
 
     - name: Upload SARIF results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: codeql-results
         path: security-results.sarif
