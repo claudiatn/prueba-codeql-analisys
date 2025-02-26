@@ -96,10 +96,12 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
+        output: sarif-results
 
     - name: Upload SARIF results
       uses: actions/upload-artifact@v4
       with:
         name: codeql-results
-        path: security-results.sarif
+        path: sarif-results/*.sarif
+
 
